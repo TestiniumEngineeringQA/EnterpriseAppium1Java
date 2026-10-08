@@ -108,7 +108,7 @@ public class HookImpl {
 //            capabilities.setCapability(CAP_CLOUD_TESTID, testID);
 //            capabilities.setCapability(CAP_CLOUD_TAKE_SS, "only_failure"); // "yes", "true", true, false, "no", "off", "only_failure", "ONLY_FAILURE"
 //            capabilities.setCapability(CAP_CLOUD_RECORDVIDEO, true);
-            capabilities.setCapability("key", System.getProperty("key"));
+            capabilities.setCapability("key", System.getProperty("testinium:key"));
         }
         return capabilities;
     }
@@ -121,7 +121,7 @@ public class HookImpl {
         capabilities
                 .setCapability("bundleId", "com.pharos.Gratis");
         if (!islocal) {
-            capabilities.setCapability("key", System.getProperty("key"));
+            capabilities.setCapability("key", System.getProperty("testinium:key"));
             capabilities.setCapability("waitForAppScript", "$.delay(1000);");
             capabilities.setCapability("usePrebuiltWDA", true);
             capabilities.setCapability("useNewWDA", true);
