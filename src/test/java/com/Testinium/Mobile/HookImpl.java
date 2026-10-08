@@ -49,7 +49,7 @@ public class HookImpl {
             hubUrl = new URL("http://172.25.1.159:4444/wd/hub");
             //hubUrl = new URL("http://172.25.6.122:4444/wd/hub");
 
-            if (StringUtils.isNotEmpty((System.getProperty("key")))) {
+            if (StringUtils.isEmpty((System.getProperty("key")))) {
                 if (localAndroid) {
                     logger.info("Local cihazda Android ortamında test ayağa kalkacak");
                     appiumDriver = new AndroidDriver(localUrl, androidCapabilities(true));
